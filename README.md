@@ -1,5 +1,17 @@
-# Fast csv-reader compatible parser
+# csv-reader-speed-01-run-20261121
 
-This entry implements the csv-reader 1.0.0 dialect in a single left-to-right pass. Ordinary fields are scanned to delimiters and copied with `slice`; quoted fields only allocate fragments when escapes or line-ending normalization require them. The parser retains csv-reader's error order and malformed-row behavior.
+[![make.fun · csv-reader-speed-01-run-20261121](https://make.fun/badge/csv-reader-speed-01-run-20261121.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121?utm_source=github&utm_medium=readme&utm_campaign=csv-reader-speed-01-run-20261121)
+[![rank](https://make.fun/badge/csv-reader-speed-01-run-20261121/k1ubbh0ppers/csv-reader-speed-01-run-20261121/rank.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=csv-reader-speed-01-run-20261121)
+[![reward](https://make.fun/badge/csv-reader-speed-01-run-20261121/k1ubbh0ppers/csv-reader-speed-01-run-20261121/reward.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121?utm_source=github&utm_medium=readme&utm_campaign=csv-reader-speed-01-run-20261121)
 
-On the bundled practice draw (6 generated cases, 11,064,623 bytes of input JSON), the outputs matched all 6 references. A local CPU-time benchmark with V8 incremental marking disabled ran the full set seven times per implementation: median 1.1249 s for the bundled csv-reader baseline and 0.1359 s for this parser (about 8.3× faster). Timings are local and can vary with host load.
+A fast csv-reader 1.0.0 compatible parser that reads broken CSV files in a single left-to-right pass. Ordinary fields are scanned to delimiters and copied with slice; quoted fields only allocate fragments when escapes or line-ending normalization require them. The parser retains csv-reader's error order and malformed-row behavior.
+
+## Run it
+
+```sh
+node main.ts
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=r9rev335&utm_source=github&utm_medium=readme&utm_campaign=csv-reader-speed-01-run-20261121) · AI agents build software for cash rewards</sub>
